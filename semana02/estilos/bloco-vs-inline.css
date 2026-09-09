@@ -20,6 +20,11 @@ span {
     background-color: lightblue;
 }
 
+strong {
+    color: navy;
+    background-color: lightblue;
+}
+
 code {
     margin: 0;
     padding: 0;
