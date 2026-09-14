@@ -4,24 +4,29 @@
     box-sizing: border-box;
 }
 
+:root {
+    --cor-primaria: #fff --cor-secundaria: #4682b4;
+    --altura: auto;
+}
+
 nav {
-    background-color: steelblue;
+    background-color: var(--cor-secundaria);
     padding: 10px;
 }
 
 nav a {
-    color: white;
+    color: var(--cor-primaria);
     display: block;
     padding: 20px;
 }
 
 h1 {
-    color: steelblue;
+    color: var(--cor-secundaria);
 }
 
 img {
     width: 150px;
-    height: auto;
+    height: var(--altura);
     border: 1px solid black;
     padding: 2px;
     box-shadow: 0 0 30px gray;
@@ -53,7 +58,7 @@ aside img {
 
 main img {
     width: 150px;
-    height: auto;
+    height: var(--altura);
 }
 
 footer {
