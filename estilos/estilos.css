@@ -5,8 +5,12 @@
 }
 
 :root {
-    --cor-primaria: #fff --cor-secundaria: #4682b4;
+    --cor-primaria: #fff;
+
     --altura: auto;
+
+    --cor-secundaria: #4682b4;
+
 }
 
 nav {
