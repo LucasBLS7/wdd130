@@ -7,8 +7,6 @@
 :root {
     --cor-primaria: #055a05;
     /* verde-floresta */
-    --cor-secundaria: #f4a261;
-    /* bege médio */
     --cor-destaque1: #264653;
     /* azul-escuro acinzentado */
     --cor-destaque2: #e9c46a;
@@ -62,6 +60,15 @@ article {
 
 .redes-sociais a {
     text-decoration: none;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+
+}
+
+.redes-sociais a img {
+    display: block;
+    border: none;
 }
 
 .hero {
