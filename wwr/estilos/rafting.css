@@ -41,6 +41,7 @@ article p {
 
 footer nav {
     background-color: var(--cor-primaria);
+    text-decoration: none;
 }
 
 h1,
