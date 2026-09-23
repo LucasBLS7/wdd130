@@ -1,100 +1,225 @@
+/* RESET BÁSICO */
+/* Remove margens padrão e garante que bordas não alterem o tamanho dos elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --cor-primaria: #055a05;
-    /* verde-floresta */
-    --cor-destaque1: #264653;
-    /* azul-escuro acinzentado */
-    --cor-destaque2: #e9c46a;
-    /* amarelo-claro dourado */
-    --fonte-titulo: "Times New Roman", "Georgia", serif;
-    --fonte-body: Arial, Helvetica, sans-serif;
-}
-
-header {
-    background-color: #fff;
-    color: var(--cor-destaque2);
-}
-
 body {
-    font-family: var(--fonte-body);
-    color: var(--cor-dstaque1);
+    font-family: Arial, sans-serif;
+    color: #0c4507;
+    /* Adiciona uma borda ao redor de toda a página para simular o papel do wireframe */
+    border: 1px solid #dddd73;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: #f5f5c7;
+    /* Limita a largura para telas grandes */
 }
 
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
-
+/* ESTILOS DO CABEÇALHO */
+.header {
+    background-color: #e6e628;
+    /* Fundo cinza escuro */
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    /* Espaça a logo do menu */
+    align-items: center;
+    border: 1px solid #777;
+    margin-bottom: 20px;
 }
 
-article p {
-    background-color: var(--cor-destaque2);
-    margin: 0px;
-    padding: 25px;
+img {
+    width: 100px;
 }
 
-footer nav {
-    background-color: var(--cor-primaria);
+.logo-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #dddd73;
+    border: 2px solid #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+}
+
+.nav-menu ul {
+    list-style: none;
+    /* Remove bolinhas da lista */
+    display: flex;
+}
+
+.nav-menu ul li {
+    border: 1px solid #777;
+    background-color: #fff;
+}
+
+.nav-menu ul li a {
     text-decoration: none;
-}
-
-h1,
-h2 {
-    font-family: var(--fonte-titulo);
-    color: var(--cor-primaria);
-    text-align: center;
-}
-
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-.redes-sociais a {
-    text-decoration: none;
-    display: inline-block;
-    font-size: 0;
-    line-height: 0;
-
-}
-
-.redes-sociais a img {
+    color: #000;
+    padding: 10px 20px;
     display: block;
-    border: none;
 }
 
+/* ESTILOS DA SEÇÃO HERO */
 .hero {
-    position: relative;
+    padding: 40px;
+    border: 1px solid #777;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .hero img {
-    display: block;
-    width: 100%;
-    height: auto;
+    width: 325px;
+    border-radius: 5%;
 }
 
-h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
+.hero h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border: 1px solid #777;
+    /* Caixa ao redor do texto e imagem */
+    padding: 20px;
+}
+
+.hero-text {
+    flex: 2;
+    /* Ocupa o dobro de espaço em relação à imagem */
+    text-align: left;
+    line-height: 1.6;
+}
+
+.hero-image-placeholder {
+    flex: 1;
+    height: 150px;
+    background-color: #b3b3b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ESTILOS DA SEÇÃO HISTÓRIA */
+.history {
+    background-color: #e6e628;
+    /* Fundo cinza claro */
+    padding: 40px;
+    border: 1px solid #777;
+    margin-bottom: 20px;
+}
+
+.history h2 {
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--cor-destaque1);
-    color: #fff;
+    margin-bottom: 30px;
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
+.history-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
 
+.history-text {
+    flex: 1;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.history-image-placeholder img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10%;
+    background-color: #222;
+    /* Fundo bem escuro como no wireframe */
+    color: #dddd73;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ESTILOS DA SEÇÃO AVENTURA (GALERIA) */
+.adventure {
+    padding: 40px;
+    border: 1px solid #777;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.adventure h2 {
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    /* Distribui os 5 itens igualmente */
+    gap: 15px;
+    flex-wrap: wrap;
+    /* Permite que os itens caiam para a linha de baixo em telas menores */
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-image {
+    width: 120px;
+    height: 120px;
+    background-color: #e0e0e0;
+    border: 1px solid #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* ESTILOS DO RODAPÉ (FOOTER) */
+.footer {
+    background-color: #e6e628;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #777;
+}
+
+.footer-text {
+    font-size: 18px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+a img {
+    width: 30px;
+    border-radius: 10%;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #555;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    /* Adiciona a imagem de 'X' simulada na caixa */
+    background-image: linear-gradient(to bottom right, transparent 48%, #555 49%, #555 51%, transparent 52%),
+        linear-gradient(to top right, transparent 48%, #555 49%, #555 51%, transparent 52%);
+    color: transparent;
+    /* Oculta o texto do 'X' porque desenhamos com css */
 }
