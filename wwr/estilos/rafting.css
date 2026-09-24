@@ -1,5 +1,4 @@
 /* RESET BÁSICO */
-/* Remove margens padrão e garante que bordas não alterem o tamanho dos elementos */
 * {
     margin: 0;
     padding: 0;
@@ -9,45 +8,30 @@
 body {
     font-family: Arial, sans-serif;
     color: #0c4507;
-    /* Adiciona uma borda ao redor de toda a página para simular o papel do wireframe */
     border: 1px solid #dddd73;
     margin: 20px auto;
     max-width: 1000px;
     background-color: #f5f5c7;
-    /* Limita a largura para telas grandes */
 }
 
 /* ESTILOS DO CABEÇALHO */
 .header {
     background-color: #e6e628;
-    /* Fundo cinza escuro */
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
-    /* Espaça a logo do menu */
     align-items: center;
     border: 1px solid #777;
     margin-bottom: 20px;
 }
 
-img {
+.logo-placeholder img {
     width: 100px;
-}
-
-.logo-placeholder {
-    width: 100px;
-    height: 100px;
-    background-color: #dddd73;
-    border: 2px solid #888;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #888;
+    border-radius: 5px;
 }
 
 .nav-menu ul {
     list-style: none;
-    /* Remove bolinhas da lista */
     display: flex;
 }
 
@@ -63,128 +47,152 @@ img {
     display: block;
 }
 
-/* ESTILOS DA SEÇÃO HERO */
+/* =========================================
+   ESTILOS DA SEÇÃO HERO (POSIÇÕES EXATAS)
+   ========================================= */
 .hero {
-    padding: 40px;
+    position: relative;
+    /* Exigido pela auditoria */
+    height: 400px;
+    /* Dá uma altura fixa para a foto caber */
     border: 1px solid #777;
     margin-bottom: 20px;
-    text-align: center;
-}
-
-.hero img {
-    width: 325px;
-    border-radius: 5%;
+    overflow: hidden;
+    /* Corta bordas que passarem do tamanho */
+    border-radius: 5px;
 }
 
 .hero h1 {
-    margin-bottom: 30px;
+    position: absolute;
+    /* Exigido pela auditoria */
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza perfeitamente */
+    z-index: 2;
+    background-color: rgba(230, 230, 40, 0.9);
+    /* Cor #e6e628 com transparência */
+    padding: 10px 30px;
+    border-radius: 5px;
     font-size: 28px;
+    text-align: center;
+    width: 80%;
 }
 
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    border: 1px solid #777;
-    /* Caixa ao redor do texto e imagem */
-    padding: 20px;
+.hero article {
+    position: absolute;
+    /* Exigido pela auditoria */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.hero-text {
-    flex: 2;
-    /* Ocupa o dobro de espaço em relação à imagem */
-    text-align: left;
-    line-height: 1.6;
+.hero article img.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* A foto preenche tudo sem esticar */
 }
 
-.hero-image-placeholder {
-    flex: 1;
-    height: 150px;
-    background-color: #b3b3b3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero article p {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(245, 245, 199, 0.9);
+    /* Cor #f5f5c7 com transparência */
+    border: 1px solid #dddd73;
+    padding: 15px;
+    width: 85%;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 1.5;
 }
 
-/* ESTILOS DA SEÇÃO HISTÓRIA */
+/* =========================================
+   ESTILOS DA SEÇÃO HISTÓRIA
+   ========================================= */
 .history {
     background-color: #e6e628;
-    /* Fundo cinza claro */
     padding: 40px;
     border: 1px solid #777;
     margin-bottom: 20px;
-}
-
-.history h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.history-content {
     display: flex;
+    flex-wrap: wrap;
+    /* Faz o H2 ficar no topo e os outros dividirem o espaço */
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
 }
 
-.history-text {
+.history h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.history p {
     flex: 1;
+    min-width: 300px;
     text-align: left;
     line-height: 1.5;
 }
 
-.history-image-placeholder img {
+.history-image {
     width: 200px;
     height: 150px;
     border-radius: 10%;
-    background-color: #222;
-    /* Fundo bem escuro como no wireframe */
-    color: #dddd73;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    object-fit: cover;
 }
 
-/* ESTILOS DA SEÇÃO AVENTURA (GALERIA) */
+/* =========================================
+   ESTILOS DA SEÇÃO AVENTURA (GALERIA)
+   ========================================= */
 .adventure {
     padding: 40px;
     border: 1px solid #777;
     margin-bottom: 20px;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .adventure h2 {
-    margin-bottom: 30px;
-}
-
-.gallery {
-    display: flex;
-    justify-content: space-between;
-    /* Distribui os 5 itens igualmente */
-    gap: 15px;
-    flex-wrap: wrap;
-    /* Permite que os itens caiam para a linha de baixo em telas menores */
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .gallery-item {
+    width: 150px;
+    background-color: #e6e628;
+    /* Sua cor amarela */
+    border: 1px solid #dddd73;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10px;
+    overflow: hidden;
 }
 
-.gallery-image {
-    width: 120px;
+.gallery-item img {
+    width: 100%;
     height: 120px;
-    background-color: #e0e0e0;
-    border: 1px solid #888;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    object-fit: cover;
     margin-bottom: 10px;
 }
 
-/* ESTILOS DO RODAPÉ (FOOTER) */
+.gallery-item figcaption {
+    font-weight: bold;
+    color: #0c4507;
+}
+
+/* =========================================
+   ESTILOS DO RODAPÉ (FOOTER)
+   ========================================= */
 .footer {
     background-color: #e6e628;
     padding: 20px 40px;
@@ -194,32 +202,20 @@ img {
     border: 1px solid #777;
 }
 
-.footer-text {
-    font-size: 18px;
+.footer p {
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.social-icons {
+/* A classe exigida socialmedia substitui social-icons */
+.socialmedia {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
-a img {
-    width: 30px;
+.socialmedia a img {
+    width: 35px;
+    height: 35px;
     border-radius: 10%;
-}
-
-.icon {
-    width: 50px;
-    height: 50px;
-    border: 2px solid #555;
-    background-color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    /* Adiciona a imagem de 'X' simulada na caixa */
-    background-image: linear-gradient(to bottom right, transparent 48%, #555 49%, #555 51%, transparent 52%),
-        linear-gradient(to top right, transparent 48%, #555 49%, #555 51%, transparent 52%);
-    color: transparent;
-    /* Oculta o texto do 'X' porque desenhamos com css */
+    object-fit: cover;
 }

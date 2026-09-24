@@ -15,10 +15,8 @@
 <body>
 
     <!-- CABEÇALHO (HEADER) -->
-    <!-- Contém o logotipo e o menu de navegação -->
     <header class="header">
         <div class="logo-placeholder">
-            <!-- Substitua o texto abaixo pela tag <img> com sua logo real -->
             <img src="./imagens/logo-rafting-site.png" alt="Logo da empresa de rafting">
         </div>
         <nav class="nav-menu">
@@ -31,102 +29,81 @@
         </nav>
     </header>
 
-    <main class="hero">
+    <!-- O MAIN ABRIGA O HERO E EXATAMENTE DUAS SEÇÕES -->
+    <main>
+
+        <!-- HERO DIV: Relativa, contendo apenas H1 e ARTICLE -->
         <div class="hero">
-            <!-- H1 agora contém o nome da empresa, conforme exigido -->
             <h1>Rafting em Corredeiras</h1>
 
-            <!-- Hero content agora é um ARTICLE contendo a IMG, conforme exigido -->
-            <article class="hero-content">
-                <div class="hero-text">
-                    <p>Desbrave as corredeiras mais emocionantes com a segurança e a experiência de
-                        quem
-                        conhece a natureza. Nossos guias são especializados em proporcionar momentos
-                        inesquecíveis para você, seus amigos e sua família. Sinta a adrenalina e
-                        conecte-se
-                        com o meio ambiente de uma forma totalmente nova.</p>
-                </div>
-                <!-- Substitua o 'src' pelo caminho da sua imagem -->
+            <!-- ARTICLE: Absoluto, contendo a IMG e o texto -->
+            <article>
                 <img src="./imagens/hero-imagem-rafting.jpg" alt="Aventura de Rafting"
-                  class="hero-image-placeholder">
+                  class="hero-image">
+                <p>Desbrave as corredeiras mais emocionantes com a segurança e a experiência de quem
+                    conhece a natureza. Nossos guias são especializados em proporcionar momentos
+                    inesquecíveis para você, seus amigos e sua família. Sinta a adrenalina e
+                    conecte-se com o meio ambiente de uma forma totalmente nova.</p>
             </article>
+        </div>
+
+        <!-- SEÇÃO 1: História (Exatamente um H2 e um P exigidos pela auditoria) -->
+        <section class="history">
+            <h2>História</h2>
+            <img src="./imagens/clientes-felizes.jpg" alt="Clientes felizes depois do passeio"
+              class="history-image">
+            <!-- Juntei seus dois parágrafos de Lorem Ipsum em um só para cumprir a regra de "um p" -->
+            <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at
+                vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
+                hendrerit. Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
+                legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an
+                brute copiosae hendrerit.</p>
+        </section>
+
+        <!-- SEÇÃO 2: Aventura (H2 e 5 elementos FIGURE diretamente dentro) -->
+        <section class="adventure">
+            <h2>A aventura está te esperando!</h2>
+
+            <figure class="gallery-item">
+                <img src="./imagens/hero-imagem-rafting.jpg" alt="Passeio 1">
+                <figcaption>Legenda 1</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="./imagens/hero-imagem-rafting.jpg" alt="Passeio 2">
+                <figcaption>Legenda 2</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="./imagens/hero-imagem-rafting.jpg" alt="Passeio 3">
+                <figcaption>Legenda 3</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="./imagens/hero-imagem-rafting.jpg" alt="Passeio 4">
+                <figcaption>Legenda 4</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="./imagens/hero-imagem-rafting.jpg" alt="Passeio 5">
+                <figcaption>Legenda 5</figcaption>
+            </figure>
+        </section>
 
     </main>
 
-    <!-- SEÇÃO HISTÓRIA -->
-    <!-- Área com fundo diferente para destacar a história da empresa -->
-    <section class="history">
-        <h2>História</h2>
-        <div class="history-content">
-            <div class="history-text">
-                <!-- Primeiro parágrafo da história -->
-                <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
-                    at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute
-                    copiosae hendrerit.</p>
-            </div>
-            <div class="history-image-placeholder">
-                <!-- Imagem central da história -->
-                <img src="./imagens/clientes-felizes.jpg" alt="Clientes felizes depois do passeio">
-            </div>
-            <div class="history-text">
-                <!-- Segundo parágrafo da história -->
-                <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
-                    at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute
-                    copiosae hendrerit.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO AVENTURA (GALERIA) -->
-    <!-- Grid de imagens destacando as atividades -->
-    <section class="adventure">
-        <h2>A aventura está te esperando!</h2>
-        <div class="gallery">
-            <!-- Cada item da galeria contém uma imagem e uma legenda -->
-            <!-- Item 1 -->
-            <div class="gallery-item">
-                <div class="gallery-image">Img</div>
-                <p>Legenda</p>
-            </div>
-            <!-- Item 2 -->
-            <div class="gallery-item">
-                <div class="gallery-image">Img</div>
-                <p>Legenda</p>
-            </div>
-            <!-- Item 3 -->
-            <div class="gallery-item">
-                <div class="gallery-image">Img</div>
-                <p>Legenda</p>
-            </div>
-            <!-- Item 4 -->
-            <div class="gallery-item">
-                <div class="gallery-image">Img</div>
-                <p>Legenda</p>
-            </div>
-            <!-- Item 5 -->
-            <div class="gallery-item">
-                <div class="gallery-image">Img</div>
-                <p>Legenda</p>
-            </div>
-        </div>
-    </section>
-
     <!-- RODAPÉ (FOOTER) -->
-    <!-- Contém informações finais e links para redes sociais -->
     <footer class="footer">
-        <p>©2026, Rafting em Corredeiras, Lucas Bezerra de Lima Santos </p>
-        <div class="footer-text">
-            <!-- Substitua pelo texto desejado, como direitos autorais -->
+        <p>© 2026, Rafting em Corredeiras, Lucas Bezerra de Lima Santos</p>
 
-        </div>
-        <nav class="social-icons">
-            <!-- Cada div desta representa o ícone de uma rede social -->
-            <a href="https://www.facebook.com/">
-                <img src="./imagens/facebook-logo.png" alt="Ícone do Facebook"> </a>
-            <a href="https://www.instagram.com/">
-                <img src="./imagens/logo-instagram.jpg" alt="Ícone do instagram"></a>
-            <a href="https://www.linkedin.com">
-                <img src="./imagens/logo-linkedin.png" alt="Ícone do LinkedIn"></a>
+        <!-- NAV com a classe EXATA pedida pela auditoria, contendo 3 links com imagens -->
+        <nav class="socialmedia">
+            <a href="https://www.facebook.com/"><img src="./imagens/facebook-logo.png"
+                  alt="Ícone do Facebook"></a>
+            <a href="https://www.instagram.com/"><img src="./imagens/logo-instagram.jpg"
+                  alt="Ícone do instagram"></a>
+            <a href="https://www.linkedin.com"><img src="./imagens/logo-linkedin.png"
+                  alt="Ícone do LinkedIn"></a>
         </nav>
     </footer>
 
