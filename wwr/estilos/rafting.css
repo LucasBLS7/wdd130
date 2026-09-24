@@ -6,82 +6,105 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    /* Usa as fontes modernas padrão do sistema do usuário (muito mais elegante que Arial puro) */
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: #0c4507;
-    border: 1px solid #dddd73;
+    background-color: #f5f5c7;
     margin: 20px auto;
     max-width: 1000px;
-    background-color: #f5f5c7;
+    /* Removida a borda amarela dura do body para um visual mais limpo */
 }
 
-/* ESTILOS DO CABEÇALHO */
+/* =========================================
+   ESTILOS DO CABEÇALHO
+   ========================================= */
 .header {
     background-color: #e6e628;
-    padding: 20px 40px;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #777;
-    margin-bottom: 20px;
+    border-radius: 12px;
+    /* Quinas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra elegante no lugar da borda cinza */
+    margin-bottom: 30px;
 }
 
 .logo-placeholder img {
-    width: 100px;
-    border-radius: 5px;
+    width: 90px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.logo-placeholder img:hover {
+    transform: scale(1.05);
+    /* Efeito de zoom na logo */
 }
 
 .nav-menu ul {
     list-style: none;
     display: flex;
+    gap: 15px;
+    /* Separa os itens sem precisar de margens complexas */
 }
 
 .nav-menu ul li {
-    border: 1px solid #777;
-    background-color: #fff;
+    background-color: transparent;
+    /* Removemos o fundo branco duro */
 }
 
 .nav-menu ul li a {
     text-decoration: none;
-    color: #000;
+    color: #0c4507;
+    font-weight: 600;
     padding: 10px 20px;
-    display: block;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    /* Prepara a animação */
+}
+
+/* Efeito ao passar o mouse no menu */
+.nav-menu ul li a:hover {
+    background-color: #0c4507;
+    color: #f5f5c7;
 }
 
 /* =========================================
-   ESTILOS DA SEÇÃO HERO (POSIÇÕES EXATAS)
+   ESTILOS DA SEÇÃO HERO
    ========================================= */
 .hero {
     position: relative;
-    /* Exigido pela auditoria */
-    height: 400px;
-    /* Dá uma altura fixa para a foto caber */
-    border: 1px solid #777;
-    margin-bottom: 20px;
+    height: 450px;
+    /* Aumentei um pouco para dar mais respiro */
+    margin-bottom: 40px;
+    border-radius: 16px;
     overflow: hidden;
-    /* Corta bordas que passarem do tamanho */
-    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* Sombra na imagem principal */
 }
 
 .hero h1 {
     position: absolute;
-    /* Exigido pela auditoria */
-    top: 20px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    /* Centraliza perfeitamente */
     z-index: 2;
-    background-color: rgba(230, 230, 40, 0.9);
-    /* Cor #e6e628 com transparência */
-    padding: 10px 30px;
-    border-radius: 5px;
-    font-size: 28px;
+    background-color: rgba(230, 230, 40, 0.95);
+    /* Amarelo com leve transparência */
+    color: #0c4507;
+    padding: 12px 40px;
+    border-radius: 30px;
+    /* Estilo de "pílula" moderno */
+    font-size: 32px;
     text-align: center;
-    width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    /* Efeito de vidro fosco no fundo (vidro temperado) */
 }
 
 .hero article {
     position: absolute;
-    /* Exigido pela auditoria */
     top: 0;
     left: 0;
     width: 100%;
@@ -92,102 +115,120 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* A foto preenche tudo sem esticar */
 }
 
 .hero article p {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(245, 245, 199, 0.9);
-    /* Cor #f5f5c7 com transparência */
-    border: 1px solid #dddd73;
-    padding: 15px;
+    background-color: rgba(245, 245, 199, 0.95);
+    color: #0c4507;
+    padding: 20px 30px;
     width: 85%;
     text-align: center;
-    border-radius: 5px;
-    line-height: 1.5;
+    border-radius: 12px;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
 }
 
 /* =========================================
    ESTILOS DA SEÇÃO HISTÓRIA
    ========================================= */
 .history {
-    background-color: #e6e628;
-    padding: 40px;
-    border: 1px solid #777;
-    margin-bottom: 20px;
+    background-color: #ffffff;
+    /* Fundo branco para descansar a vista */
+    padding: 50px;
+    border-radius: 16px;
+    margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
-    /* Faz o H2 ficar no topo e os outros dividirem o espaço */
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .history h2 {
     width: 100%;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 28px;
 }
 
 .history p {
     flex: 1;
     min-width: 300px;
-    text-align: left;
-    line-height: 1.5;
+    text-align: justify;
+    line-height: 1.7;
 }
 
 .history-image {
-    width: 200px;
-    height: 150px;
-    border-radius: 10%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* Foto da história redonda fica muito elegante */
     object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* =========================================
    ESTILOS DA SEÇÃO AVENTURA (GALERIA)
    ========================================= */
 .adventure {
-    padding: 40px;
-    border: 1px solid #777;
-    margin-bottom: 20px;
+    padding: 50px;
+    margin-bottom: 40px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 25px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .adventure h2 {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 28px;
 }
 
 .gallery-item {
-    width: 150px;
-    background-color: #e6e628;
-    /* Sua cor amarela */
-    border: 1px solid #dddd73;
-    border-radius: 10px;
+    width: 160px;
+    background-color: #f5f5c7;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animação suave */
+}
+
+/* Efeito de flutuar ao passar o mouse */
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 120px;
+    height: 130px;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .gallery-item figcaption {
-    font-weight: bold;
+    font-weight: 700;
     color: #0c4507;
+    font-size: 14px;
 }
 
 /* =========================================
@@ -195,27 +236,36 @@ body {
    ========================================= */
 .footer {
     background-color: #e6e628;
-    padding: 20px 40px;
+    padding: 30px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #777;
+    border-radius: 12px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .footer p {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0c4507;
 }
 
-/* A classe exigida socialmedia substitui social-icons */
 .socialmedia {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .socialmedia a img {
-    width: 35px;
-    height: 35px;
-    border-radius: 10%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Ícones sociais perfeitamente redondos */
     object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.socialmedia a img:hover {
+    transform: translateY(-5px);
+    /* Ícone pula levemente ao passar o mouse */
 }
