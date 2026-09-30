@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #243b70 0%, #3f2a72 50%, #141b35 100%);
+    padding: 24px;
+}
+
+/* Cartão do formulário */
+main {
+    background: #ffffff;
+    width: 100%;
+    max-width: 520px;
+    border-radius: 20px;
+    padding: 36px 32px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Títulos */
+h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 20px 0 14px 0;
+}
+
+label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+/* Caixas de entrada (Inputs, Select e Textarea) */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    color: #111827;
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#pet {}
+
+/* Textarea específico */
+textarea {
+    resize: vertical;
+    line-height: 1.5;
+}
+
+/* Linha do Switch (Checkbox) */
+
+/* Botão de Envio */
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #172a45 0%, #205060 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.15s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(23, 42, 69, 0.25);
+}

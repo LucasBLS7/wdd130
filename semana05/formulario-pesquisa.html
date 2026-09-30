@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=h, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 130 - Atividade formulário</title>
+    <link rel="stylesheet" href="estilos/formulario-pesquisa.css">
 </head>
 
 <body>
@@ -13,12 +14,16 @@
     </header>
 
     <main>
-        <form action="">
+        <h1>WDD 130| Formulário HTML - Enquete do Usuário</h1>
+        <h2>Informações de contato</h2>
+        <form>
             <label for="nomecompleto">Nome completo: </label>
             <input type="text" id="nome-completo" name="nome-completo" required>
+            <br>
+            <br>
             <label for="emaildousuario">Email:</label>
             <input type="text" id="email-do-usuario" name="email-do-usuario" required>
-
+            <h2>Perguntas</h2>
             <label for="navegadorfavorito">Qual é o seu navegador favorito</label>
             <select id="navegador" name="navegador">
                 <option value="1">Chrome</option>
@@ -26,12 +31,17 @@
                 <option value="3">Edge</option>
                 <option value="4">Outro</option>
             </select>
+            <br>
+            <br>
             <label for="pet">Você tem um bichinho de estimação em casa</label>
             <input type="checkbox" id="pet" name="pet">
+            <br>
+            <br>
             <label for="feedback">Liste lugares onde você morou: </label>
             <textarea id="feedback" name="feedback" rows="4"
               placeholder="Maceió, São Paulo, Londrina, Apucarana, Sarandi"></textarea>
-
+            <br>
+            <br>
             <button type="submit">Enviar Pesquisa</button>
         </form>
 
