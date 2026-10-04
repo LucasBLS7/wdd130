@@ -64,8 +64,10 @@ body {
 }
 
 .logo-box img {
+    max-width: 100px;
     display: block;
     border-radius: var(--radius);
+
 }
 
 .main-nav ul {
