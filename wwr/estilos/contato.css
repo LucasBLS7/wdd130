@@ -471,3 +471,28 @@ body {
         width: 100%;
     }
 }
+
+.redes-sociais {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.redes-sociais a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.redes-sociais a:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+.redes-sociais img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    border-radius: 4px;
+}
