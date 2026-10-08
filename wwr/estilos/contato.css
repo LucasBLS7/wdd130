@@ -428,6 +428,70 @@ body {
     color: var(--text-muted);
 }
 
+.banner-section {
+    background-color: var(--primary-color);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-container {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.banner-card {
+    position: absolute;
+    right: -30px;
+    bottom: -20px;
+    max-width: 1200px;
+    width: 50%;
+    background-color: rgba(43, 43, 43, 0.9);
+    color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #dcdcdd;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #2b2b2b;
+}
+
 /* =========================================
    RODAPÉ
    ========================================= */
